@@ -18,7 +18,6 @@ app.get('/',(req,res)=>{
 app.get('/product/:productId', async(req,res)=>{
    const {productId} =req.params;
    const {API_KEY} = req.query;
-    API_KEY ="7c3c12edf5e0523209099e036c847ef1";
 
    try{
        const response = await request(`${generateScrapperUrl(API_KEY)}&url=https://amazon.com/dp/${productId}`);
